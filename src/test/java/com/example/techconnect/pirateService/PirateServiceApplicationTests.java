@@ -21,5 +21,7 @@ class PirateServiceApplicationTests {
 	public void createPirate(){
 		Pirate jack = new Pirate("Jack", "Sparrow", 32);
 		Pirate jane = new Pirate("Jane", "Bloggs", 19);
+		pirateRepository.save(jack);
+		pirateRepository.save(jane);
 	}
 }
