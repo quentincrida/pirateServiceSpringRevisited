@@ -6,17 +6,19 @@ import javax.persistence.*;
 @Table(name="pirates")
 
 public class Pirate {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "id")
-    private Long id;
+
     @Column(name = "first_name")
-    private String firstName;
+        private String firstName;
+
     @Column(name = "last_name")
-    private String lastName;
+        private String lastName;
+
     @Column(name = "age")
     private int age;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
 
     @ManyToOne
